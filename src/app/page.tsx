@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Beaker, History, Trash2, Droplets, ArrowRight, Save, RefreshCw } from 'lucide-react';
 import { useDosageCalculator } from '@/hooks/use-dosage-calculator';
@@ -51,14 +52,20 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center space-y-2 pt-8"
       >
-        <div className="inline-flex items-center justify-center p-3 rounded-full bg-primary/10 mb-4 ring-1 ring-primary/20 backdrop-blur-md">
-          <Droplets className="w-8 h-8 text-primary" />
+        <div className="relative inline-flex mb-4 rounded-full ring-1 ring-primary/20 overflow-hidden shadow-lg shadow-primary/10">
+          <Image 
+            src="/logo-1.png" 
+            alt="Dosage Converter Logo" 
+            width={80} 
+            height={80} 
+            className="w-16 h-16 md:w-20 md:h-20 object-cover"
+          />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-400 to-emerald-400 drop-shadow-sm">
-          Dosage Converter
+          ใช้เท่าไหร่ดี? 
         </h1>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Precision pesticide calculator with liquid glass interface.
+          เครื่องมือคำนวณปริมาณสารละลายสำหรับเกษตรกรที่ต้องการความแม่นยำสูง
         </p>
       </motion.header>
 

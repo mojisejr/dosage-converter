@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -15,7 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dosage Converter | Liquid Glass",
   description: "Precision pesticide dosage calculator with a modern liquid glass interface.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  icons: {
+    icon: '/logo-1.png',
+    apple: '/logo-1.png',
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
